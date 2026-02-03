@@ -212,7 +212,7 @@ cp .env.example .env
 # Edit AWS keys, RDS password, tunnel port
 
 # 3. Launch SSH tunnel (separate terminal)
-ssh -N -L 6544:<RDS_ENDPOINT>:5432 ec2-user@bastion
+ssh -N -L <LOCAL_PORT>:<RDS_ENDPOINT>:<RDS_PORT> <SSH_USER>@<BASTION_HOST>
 
 # 4. Run pipeline
 jupyter notebook kayak_recommendation.ipynb
